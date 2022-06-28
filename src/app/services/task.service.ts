@@ -24,4 +24,7 @@ export class TaskService {
     const updateUrl = `${this.apiUrl}/${task.id}`;
     return this.http.put<Task>(updateUrl, task, httpOptions);
   }
+  addNewTask(newTask: Task) {
+    return this.http.post<Task>(this.apiUrl, newTask, httpOptions);
+  }
 }
