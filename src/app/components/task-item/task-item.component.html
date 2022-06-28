@@ -1,0 +1,14 @@
+<div class="task">
+  <h3>
+    {{ singleTask.id }}
+    <fa-icon
+      (click)="onDelete(singleTask.id)"
+      [ngStyle]="{ color: 'red' }"
+      [icon]="faTimes"
+    ></fa-icon>
+  </h3>
+  <p>{{ singleTask.text }}</p>
+
+  <p>{{ singleTask.day }}</p>
+  <p>{{ singleTask.reminder }}</p>
+</div>
